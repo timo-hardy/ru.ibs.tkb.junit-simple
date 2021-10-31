@@ -13,19 +13,19 @@ public class Main {
         }
 
         Main main = new Main();
-        main.fizzBuzzer("C:/Users/Admin/Desktop/file.txt");
+        main.replacementOfNumbers(command);
     }
 
     public List<String> stringList(List<String> list) {
         List<String> listOfNumbers = new ArrayList<>();
         for (String result : list) {
             Integer integerNum = Integer.parseInt(result);
-            if (integerNum % 3 == 0) {
-                listOfNumbers.add("Fizz");
+            if (integerNum % 3 == 0 && integerNum % 5 == 0) {
+                listOfNumbers.add("FizzBuzz");
             } else if (integerNum % 5 == 0) {
                 listOfNumbers.add("Buzz");
-            } else if (integerNum % 3 == 0 && integerNum % 5 == 0) {
-                listOfNumbers.add("FizzBuzz");
+            } else if (integerNum % 3 == 0) {
+                listOfNumbers.add("Fizz");
             } else {
                 listOfNumbers.add(result);
             }
@@ -48,7 +48,7 @@ public class Main {
         return null;
     }
 
-    public void fizzBuzzer(String fileName){
+    public void replacementOfNumbers(String fileName){
         List<String> result = stringList(readFileText(fileName));
         for (String value : result) {
             System.out.println(value);
