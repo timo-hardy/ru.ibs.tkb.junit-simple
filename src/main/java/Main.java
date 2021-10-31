@@ -12,6 +12,11 @@ public class Main {
             e.printStackTrace();
         }
 
+//        String command = "C:/Users/Admin/Desktop/file.txt";
+//        for (String arg : args) {
+//            System.out.println(command);
+//        }
+
         Main main = new Main();
         main.replacementOfNumbers(command);
     }

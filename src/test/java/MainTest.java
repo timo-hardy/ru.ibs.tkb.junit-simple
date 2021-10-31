@@ -17,7 +17,7 @@ class MainTest {
 
     @Test
     @DisplayName("List with six strings")
-    public void testStringList() {
+    public void testListWithSixStrings() {
         List<String> list = new ArrayList<>();
         list.add("1");
         list.add("4");
@@ -28,6 +28,28 @@ class MainTest {
 
         assertEquals(6, list.size(), "After add size should be six");
         assertEquals("1", list.get(0), "Checking values by index");
+    }
 
+    @Test
+    @DisplayName("ReplacementOfNumbers")
+    public void testStringListReplacementOfNumbers() {
+        List<String> listFirst = new ArrayList<>();
+        listFirst.add("1");
+        listFirst.add("4");
+        listFirst.add("15");
+        listFirst.add("8");
+        listFirst.add("9");
+        listFirst.add("10");
+
+        List<String> listSecond = new ArrayList<>();
+        listSecond.add("1");
+        listSecond.add("4");
+        listSecond.add("FizzBuzz");
+        listSecond.add("8");
+        listSecond.add("Fizz");
+        listSecond.add("Buzz");
+
+        assertEquals(listSecond, main.stringList(listFirst),
+                "Replacing multiples of 3, 5 and simultaneously 3 and 5");
     }
 }
